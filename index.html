@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Meri's JavaScript Events</title>
+
+    <script>
+        //This is single line comment
+        /*
+         * This is a demonstration of some very simple javascript concepts.
+         * This is a multi line comment
+         */
+        alert("I run before the HTML loads");
+    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1>Meri's JavaScript Basics</h1>
+
+    <p>Click the button to display the date and time.</p>
+
+    <button onclick="myDate()">Time?</button>
+    <p id="demo"></p>
+    <p>&nbsp;</p>
+
+    <p>Hover over the image, then move your mouse off of it</p>
+    <a href="#"><img src="rambo1.jpg" alt="stuffed sheep at yellowstone"
+                     id="rambo" onmouseover="swap1()" onmouseout="swap2()" ></a>
+
+    <!--I include the link to the page itself so that the pointer changes to a hand-->
+    <p><em>This is how mouseover effects were done before CSS buttons were popular.</em></p>
+
+    <script>
+        function myDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+
+        function swap1(){
+           document.getElementById("rambo").src="rambo2.jpg";
+
+        }
+
+        function swap2(){
+            document.getElementById("rambo").src="rambo1.jpg";
+        }
+    </script>
+
+
+    <script>
+        alert("I run after the HTML loads");
+    </script>
+</body>
+
+
+</html>
